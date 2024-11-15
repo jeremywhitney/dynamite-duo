@@ -1,15 +1,16 @@
-import { getHeroes } from "./database.js"
+import { Character } from "../types.js";
+import { getHeroes } from "./database.js";
 
-const heroes = getHeroes()
+const heroes: Character[] = getHeroes();
 
-export const heroList = () => {
-    let heroHTML = "<ul>"
+export const heroList = (): string => {
+  let heroHTML = "<ul>";
 
-    for (const hero of heroes) {
-        heroHTML += `<li>${hero.name}</li>`
-    }
+  for (const hero of heroes) {
+    heroHTML += `<li>${hero.name}</li>`;
+  }
 
-    heroHTML += "</ul>"
+  heroHTML += "</ul>";
 
-    return heroHTML
-}
+  return heroHTML;
+};

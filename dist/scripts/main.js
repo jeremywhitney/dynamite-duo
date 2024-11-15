@@ -13,5 +13,10 @@ const theWholeEnchilada = `
     ${villainListHTML}
     `;
 const theExistingMainElement = document.querySelector("#container");
-theExistingMainElement.innerHTML = theWholeEnchilada;
+if (theExistingMainElement) {
+    theExistingMainElement.innerHTML = theWholeEnchilada;
+}
+else {
+    console.error("Could not find container element");
+}
 //# sourceMappingURL=main.js.map
